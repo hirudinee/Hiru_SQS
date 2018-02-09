@@ -4,14 +4,14 @@ const sqs = new SL.AWS.SQS(AWS);
 exports.handler = function (event, context, callback) {
 
 	sqs.sendMessage({
-		MessageBody: 'This is a 0.6.0. test',
+		MessageBody: 'This is a 0.6.0. test edit',
 		QueueUrl: 'https://sqs.us-east-1.amazonaws.com/480964559519/Hiru_test.fifo',
 		DelaySeconds: '0',
 		MessageDeduplicationId: '001',
 		MessageGroupId: 'Sample',
 		MessageAttributes: {
-			"Test": {
-				"DataType": "String",
+			"test": {
+				"DataType": "Number",
 				"StringValue": "001"
 			}
 		}
