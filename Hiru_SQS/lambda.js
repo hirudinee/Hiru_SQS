@@ -17,9 +17,13 @@ exports.handler = function (event, context, callback) {
 		}
 	}, function (data) {
 		// your logic (logging etc) to handle successful message delivery, should be here
+		console.log(data);
+		callback(null, data);
 	}, function (error) {
 		// your logic (logging etc) to handle failures, should be here
+		console.log(error);
+		callback(null, error);
 	});
 
-	callback(null, 'Successfully executed');
+	//callback(null, 'Successfully executed');
 }
