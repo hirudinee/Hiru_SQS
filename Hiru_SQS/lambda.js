@@ -20,7 +20,7 @@ exports.handler = function (event, context, callback) {
 		console.log(data);
 		callback(null, data);
 	}, function (error) {
-		// your logic (logging etc) to handle failures, should be here
+		// your logic (logging etc) to handle failures, should be here test comment
 		console.log(error);
 		callback(null, error);
 	});
